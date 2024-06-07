@@ -13,9 +13,6 @@ export const useAnalytics = (
       fetch("https://web-analytics-sigma.vercel.app/api", {
         method: "POST",
         body: JSON.stringify({ userTimeZone, projectName }),
-        headers: {
-          "Content-Type": "application/json",
-        },
       });
     } catch (err) {
       console.log(err);
