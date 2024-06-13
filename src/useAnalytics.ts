@@ -5,9 +5,6 @@ export const useAnalytics = () => {
   useEffect(() => {
     //@ts-ignore
     const projectName = AVAILABLE_PROJECTS[currentProject];
-    console.log("AVAILABLE_PROJECTS", AVAILABLE_PROJECTS);
-    console.log("currentProject", currentProject);
-    console.log("projectName", projectName);
 
     if (!projectName) {
       throw new Error("incorrect variable REACT_APP_WA_PROJECT_NAME");
