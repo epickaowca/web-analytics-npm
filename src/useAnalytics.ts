@@ -1,13 +1,12 @@
 import { useEffect } from "react";
+import { BASE_URL, AVAILABLE_PROJECTS, currentProject } from "./constants";
 
-export const useAnalytics = (
-  projectName:
-    | "audiophile-ecommerce-website"
-    | "google-drive-clone"
-    | "interactive-comments-section"
-    | "multi-step-form"
-) => {
+export const useAnalytics = () => {
   useEffect(() => {
+    const projectName = AVAILABLE_PROJECTS[currentProject];
+    if (projectName)
+      throw new Error("incorrect variable REACT_APP_WA_PROJECT_NAME");
+
     const timeStamp = localStorage.getItem("OO_WB_TimeStamp");
     if (timeStamp) {
       const now = new Date();
