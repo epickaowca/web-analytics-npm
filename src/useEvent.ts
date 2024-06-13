@@ -1,6 +1,6 @@
 import { BASE_URL, AVAILABLE_PROJECTS, currentProject } from "./constants";
 
-export const useAnalytics = (eventName: string, label: string) => {
+export const useEvent = (eventName: string, label: string) => {
   //@ts-ignore
   const projectName = AVAILABLE_PROJECTS[currentProject];
   if (!projectName)

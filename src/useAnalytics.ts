@@ -5,8 +5,10 @@ export const useAnalytics = () => {
   useEffect(() => {
     //@ts-ignore
     const projectName = AVAILABLE_PROJECTS[currentProject];
-    if (projectName)
+
+    if (!projectName) {
       throw new Error("incorrect variable REACT_APP_WA_PROJECT_NAME");
+    }
 
     const timeStamp = localStorage.getItem("OO_WB_TimeStamp");
     if (timeStamp) {
